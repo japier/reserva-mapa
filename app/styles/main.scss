@@ -1,5 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 .browsehappy {
@@ -70,7 +71,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    width: 100%;
   }
 
   /* Remove the padding we set earlier */
@@ -87,5 +88,18 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+}
+.title {
+  text-align:center;
+}
+.plano {
+  height:768px;
+  width:1280px;
+  .block {
+    width:30px;
+    display:block;
+    background:gray;
+    cursor:pointer;
   }
 }

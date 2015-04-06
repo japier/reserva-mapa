@@ -12,6 +12,7 @@ angular
   .module('thtReservaMapaApp', [
     'ngAnimate',
     'ngRoute',
+    'ngDragDrop',
     'ngTouch'
   ])
   .config(function ($routeProvider) {
