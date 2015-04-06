@@ -1,10 +1,36 @@
 <p class="title">Mapa y así</p>
 <div class="container-fluid">
 <div class="sidebar col-md-2">
-  <input type="field" placeholder="New Id" ng-model="mesa"/>
-  <button class="btn btn-primary" type="button" ng-click="addButton()">Hi!</button>
+  <button class="btn btn-primary" type="button" ng-click="addButton()">Nueva Mesa</button>
+  <div class="" ng-show="sideVisible()">
+    <div class="input-group">
+      <span class="input-group-addon">ID</span>
+      <input type="text" class="form-control" placeholder="Identificador" aria-describedby="basic-addon1" ng-model="currentMesa.id">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">Alto</span>
+      <input type="text" class="form-control" placeholder="Alto" aria-describedby="basic-addon1" ng-model="currentMesa.h">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">Ancho</span>
+      <input type="text" class="form-control" placeholder="Alto" aria-describedby="basic-addon1" ng-model="currentMesa.w">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">Color 1</span>
+      <input type="text" class="form-control" placeholder="Color primario" aria-describedby="basic-addon1" ng-model="currentMesa.color">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">Color 2</span>
+      <input type="text" class="form-control" placeholder="Color secundario" aria-describedby="basic-addon1" ng-model="currentMesa.color2">
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="button" ng-click="save()" ng-show="create">Crear</button>
 </div>
 <div class="thumbnail plano col-md-10" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable="{onDrop:'drop(this)'}">
-  <div class="block" data-drag="true" id="{{mesa.id}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:false}" ng-repeat="mesa in mesas">{{mesa.id}}</div>
-</div>
+  <mesa mesa="mesa" ng-repeat="mesa in mesas"></mesa>
 </div>

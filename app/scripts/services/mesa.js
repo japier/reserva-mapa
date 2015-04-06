@@ -10,13 +10,13 @@
 angular.module('thtReservaMapaApp')
   .factory('Mesa', function () {
     return {
-      new : function(id){
+      new : function(){
         return {
-          "id":id,
-          "x":"10",
-          "y":"10",
-          "w":"0",
-          "h":"0",
+          "id":'',
+          "x":"0",
+          "y":"0",
+          "w":"10",
+          "h":"10",
           "color":0,
           "color2":0
         }
