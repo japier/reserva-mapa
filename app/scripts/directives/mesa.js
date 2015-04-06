@@ -12,7 +12,8 @@ angular.module('thtReservaMapaApp')
     templateUrl: '/partials/mesa.html',
     restrict: 'E',
     link: function postLink(scope, element, attrs) {
-      scope.$watchGroup(['mesa.x','mesa.y','mesa.h','mesa.w'], function() {
+      //scope.$watchGroup(['mesa.x','mesa.y','mesa.h','mesa.w'], function() {
+      scope.$watch('mesa', function() {
         var style = {
           //'background':scope.bck,
           'width':scope.mesa.w + 'px',
@@ -21,7 +22,7 @@ angular.module('thtReservaMapaApp')
           'left':scope.mesa.x + 'px',
         };
         $('#'+scope.mesa.id).css(style);
-      });
+      }, true);
     }
   };
 });
